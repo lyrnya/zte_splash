@@ -1,5 +1,8 @@
 # zte_splash
 ***A tool for unpacking/repacking logo.bin***
+
+`(UNISOC)`
+
 # Usage
 **unpack**
 ```
@@ -11,3 +14,6 @@ repack.exe boot_logo.bmp boot_lowbatt.bmp chargelogo.bmp chargelogo2.bmp chargel
 ```
 ***2025/11/14***
 - `Runs well on the ZTE 7552N`
+
+***2025/11/15***
+- `Runs well on the ZTE 7553N`
