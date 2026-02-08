@@ -1,0 +1,28 @@
+name: Build unpack and repack exe
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build unpack.exe
+        run: |
+          gcc unpack.c -o unpack.exe
+
+      - name: Build repack.exe
+        run: |
+          gcc repack.c -o repack.exe
+
+      - name: Upload executables
+        uses: actions/upload-artifact@v4
+        with:
+          name: exe-files
+          path: |
+            unpack.exe
+            repack.exe
